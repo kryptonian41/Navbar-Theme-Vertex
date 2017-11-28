@@ -44,7 +44,7 @@ body {
         box-sizing: border-box;
         padding: 20px;
         position: absolute;
-        background: #b71c1c;
+        background: #ffd740;
         content: "";
         top: -130%;
         left: 0;
@@ -55,9 +55,11 @@ body {
       .navbar-container > ul > li:hover:before {
         top: 0; }
       .navbar-container > ul > li:hover p {
-        top: 20px; }
+        top: 20px;
+        color: black; }
       .navbar-container > ul > li:hover span {
-        top: 10px; }
+        top: 10px;
+        color: black; }
       .navbar-container > ul > li:hover .sub_menu {
         bottom: -250%; }
 
@@ -65,7 +67,7 @@ body {
   position: absolute;
   display: flex;
   left: 0;
-  background: #b71c1c;
+  background: black;
   z-index: -1;
   justify-content: space-evenly;
   bottom: 20px;

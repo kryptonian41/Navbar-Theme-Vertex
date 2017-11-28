@@ -2,6 +2,7 @@ $font-pack : 'Bungee', cursive
 $color-blue : rgb(0, 176, 255)
 $color-green : rgb(118, 255, 3)
 $color-red : rgb(183, 28, 28)
+$color-yellow : rgb(255, 215, 64)
 html,body
   height: 100%
   width: 100%
@@ -48,7 +49,7 @@ body
         box-sizing: border-box
         padding: 20px
         position: absolute
-        background: $color-red
+        background: $color-yellow
         content: ""
         top: -130%
         left: 0
@@ -60,8 +61,10 @@ body
         top: 0
       &:hover p
         top: 20px
+        color: black
       &:hover span
         top: 10px
+        color: black
       &:hover .sub_menu
         bottom: -250%
 
@@ -69,7 +72,7 @@ body
   position: absolute
   display: flex
   left: 0
-  background: $color-red
+  background: black
   z-index: -1
   justify-content: space-evenly
   bottom: 20px
