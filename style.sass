@@ -1,0 +1,62 @@
+$font-pack : 'Bungee', cursive
+$color-blue : rgb(0, 176, 255)
+$color-green : rgb(118, 255, 3)
+$color-yellow : rgb(255, 234, 0)
+html,body
+  height: 100%
+  width: 100%
+
+body
+  margin: 0
+  padding: 0
+*
+  box-sizing: border-box
+.navbar-container
+  color: white
+  
+  ul
+    background: black
+    padding: 0 20px 0 20px
+    list-style: none
+    margin: 0
+    li
+      text-align: center
+      background: black
+      margin: 0
+      padding: 20px
+      display: inline-block
+      width: auto
+      color: white
+      position: relative
+      font-family: $font-pack
+      height: 110%
+      p
+        margin: 0
+        position: relative
+        z-index: 2
+        top: 0
+        transition: top 0.2s ease-in
+      span
+        position: absolute
+        left: 50%
+        transform: translate(-50%,0)
+        top: -140%
+        transition: top 0.2s ease-in
+      &:before
+        box-sizing: border-box
+        padding: 20px
+        position: absolute
+        background: $color-blue
+        content: ""
+        top: -130%
+        left: 0
+        height: 120%
+        z-index: 0
+        width: 100%
+        transition: top 0.2s ease-in
+      &:hover:before
+        top: 0
+      &:hover p
+        top: 20px
+      &:hover span
+        top: 10px

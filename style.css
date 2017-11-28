@@ -1,0 +1,61 @@
+html, body {
+  height: 100%;
+  width: 100%; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+* {
+  box-sizing: border-box; }
+
+.navbar-container {
+  color: white; }
+  .navbar-container ul {
+    background: black;
+    padding: 0 20px 0 20px;
+    list-style: none;
+    margin: 0; }
+    .navbar-container ul li {
+      text-align: center;
+      background: black;
+      margin: 0;
+      padding: 20px;
+      display: inline-block;
+      width: auto;
+      color: white;
+      position: relative;
+      font-family: "Bungee", cursive;
+      height: 110%; }
+      .navbar-container ul li p {
+        margin: 0;
+        position: relative;
+        z-index: 2;
+        top: 0;
+        transition: top 0.2s ease-in; }
+      .navbar-container ul li span {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: -140%;
+        transition: top 0.2s ease-in; }
+      .navbar-container ul li:before {
+        box-sizing: border-box;
+        padding: 20px;
+        position: absolute;
+        background: #00b0ff;
+        content: "";
+        top: -130%;
+        left: 0;
+        height: 120%;
+        z-index: 0;
+        width: 100%;
+        transition: top 0.2s ease-in; }
+      .navbar-container ul li:hover:before {
+        top: 0; }
+      .navbar-container ul li:hover p {
+        top: 20px; }
+      .navbar-container ul li:hover span {
+        top: 10px; }
+
+/*# sourceMappingURL=style.css.map */
