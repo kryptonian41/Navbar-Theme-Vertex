@@ -1,12 +1,13 @@
 $font-pack : 'Bungee', cursive
 $color-blue : rgb(0, 176, 255)
 $color-green : rgb(118, 255, 3)
-$color-yellow : rgb(183, 28, 28)
+$color-red : rgb(183, 28, 28)
 html,body
   height: 100%
   width: 100%
 
 body
+  background: rgb(24, 4, 4)
   margin: 0
   padding: 0
 *
@@ -14,12 +15,12 @@ body
 .navbar-container
   color: white
   
-  ul
+  &>ul
     background: black
     padding: 0 20px 0 20px
     list-style: none
     margin: 0
-    li
+    &>li
       text-align: center
       background: black
       margin: 0
@@ -42,11 +43,12 @@ body
         transform: translate(-50%,0)
         top: -140%
         transition: top 0.2s ease-in
+
       &:before
         box-sizing: border-box
         padding: 20px
         position: absolute
-        background: $color-yellow
+        background: $color-red
         content: ""
         top: -130%
         left: 0
@@ -60,3 +62,20 @@ body
         top: 20px
       &:hover span
         top: 10px
+      &:hover .sub_menu
+        bottom: -250%
+
+.sub_menu
+  position: absolute
+  display: flex
+  left: 0
+  background: $color-red
+  z-index: -1
+  justify-content: space-evenly
+  bottom: 20px
+  transition: bottom 0.35s ease-in
+  &>ul
+    padding: 20px
+    list-style: none
+    flex-basis: 30%
+

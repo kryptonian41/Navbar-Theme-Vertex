@@ -3,6 +3,7 @@ html, body {
   width: 100%; }
 
 body {
+  background: #180404;
   margin: 0;
   padding: 0; }
 
@@ -11,12 +12,12 @@ body {
 
 .navbar-container {
   color: white; }
-  .navbar-container ul {
+  .navbar-container > ul {
     background: black;
     padding: 0 20px 0 20px;
     list-style: none;
     margin: 0; }
-    .navbar-container ul li {
+    .navbar-container > ul > li {
       text-align: center;
       background: black;
       margin: 0;
@@ -27,19 +28,19 @@ body {
       position: relative;
       font-family: "Bungee", cursive;
       height: 110%; }
-      .navbar-container ul li p {
+      .navbar-container > ul > li p {
         margin: 0;
         position: relative;
         z-index: 2;
         top: 0;
         transition: top 0.2s ease-in; }
-      .navbar-container ul li span {
+      .navbar-container > ul > li span {
         position: absolute;
         left: 50%;
         transform: translate(-50%, 0);
         top: -140%;
         transition: top 0.2s ease-in; }
-      .navbar-container ul li:before {
+      .navbar-container > ul > li:before {
         box-sizing: border-box;
         padding: 20px;
         position: absolute;
@@ -51,11 +52,27 @@ body {
         z-index: 0;
         width: 100%;
         transition: top 0.2s ease-in; }
-      .navbar-container ul li:hover:before {
+      .navbar-container > ul > li:hover:before {
         top: 0; }
-      .navbar-container ul li:hover p {
+      .navbar-container > ul > li:hover p {
         top: 20px; }
-      .navbar-container ul li:hover span {
+      .navbar-container > ul > li:hover span {
         top: 10px; }
+      .navbar-container > ul > li:hover .sub_menu {
+        bottom: -250%; }
+
+.sub_menu {
+  position: absolute;
+  display: flex;
+  left: 0;
+  background: #b71c1c;
+  z-index: -1;
+  justify-content: space-evenly;
+  bottom: 20px;
+  transition: bottom 0.35s ease-in; }
+  .sub_menu > ul {
+    padding: 20px;
+    list-style: none;
+    flex-basis: 30%; }
 
 /*# sourceMappingURL=style.css.map */
