@@ -66,19 +66,28 @@ body
         top: 10px
         color: black
       &:hover .sub_menu
-        bottom: -250%
+        bottom: unset
 
 .sub_menu
   position: absolute
   display: flex
   left: 0
+  margin-top: 20px
   background: black
   z-index: -1
-  justify-content: space-evenly
-  bottom: 20px
-  transition: bottom 0.35s ease-in
+  bottom: 100%
+  transition: bottom 0.3s ease-in
   &>ul
     padding: 20px
     list-style: none
-    flex-basis: 30%
+    flex: 0 1 auto
+    width: auto
+    &>li
+      white-space: nowrap 
+      // no wrap very important property , to stop line breaks 
+      text-align: center
+
+.divider
+  background: $color-yellow
+  width: 2px
 
