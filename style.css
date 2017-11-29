@@ -3,7 +3,7 @@ html, body {
   width: 100%; }
 
 body {
-  background: #180404;
+  background: white;
   margin: 0;
   padding: 0; }
 
@@ -60,8 +60,6 @@ body {
       .navbar-container > ul > li:hover span {
         top: 10px;
         color: black; }
-      .navbar-container > ul > li:hover .sub_menu {
-        bottom: unset; }
 
 .sub_menu {
   position: absolute;
