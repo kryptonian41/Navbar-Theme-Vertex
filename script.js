@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  var hover = false;
   $(".navbar-container ul li").hover(
     function() {
       // over
@@ -7,36 +8,37 @@ $(document).ready(function() {
       // console.log(height);
       height = height * -1;
       var prop = {
-        bottom: height + "px"
+        bottom: height + "px",
+        zIndex: 0
       };
       $(this).children(".sub_menu").css(prop);
     },
     function() {
       // out
       // console.log("mouse out");
-      var prop = {
-        bottom: '100%'
-      };
-      $(this).children(".sub_menu").css(prop);
+      if(!hover){
+        var prop = {
+          bottom: '100%',
+          zIndex: -2
+        };
+        $(this).children(".sub_menu").css(prop);
+      }
     }
   );
   $(".sub_menu").hover(
     function() {
       // over
+      hover = true;
       console.log("mouse in");
-      var height = $(this).innerHeight();
-      console.log(height);
-      height = height * -1;
-      var prop = {
-        bottom: height + "px"
-      };
-      $(this).css(prop);
+
     },
     function() {
       // out
+      hover = false;
       console.log("mouse out");
       var prop = {
-        bottom: '100%'
+        bottom: '100%',
+        zIndex : -2
       };
       $(this).css(prop);
     }
